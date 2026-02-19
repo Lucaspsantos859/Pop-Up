@@ -31,18 +31,22 @@ body.locked {
 }
 
 /* ===== TABLET (entre 768px e 1024px) ===== */
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   #mandatory-popup::before {
     background: url("../images/fundo.tablet.png") top center / cover no-repeat;
   }
 }
 
 /* ===== MOBILE (até 767px) ===== */
-@media (max-width: 767px) {
+@media (min-width: 0px) and (max-width: 767px) {
   #mandatory-popup::before {
-    background: url("../images/fundo.mobile.png") top center / cover no-repeat;
+    background-image: url("../images/fundo.mobile.png");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
   }
 }
+
 
 
 /* CAMADA ESCURA */
@@ -117,4 +121,3 @@ body.locked {
 .btn-decline:hover {
   background: #ccc;
 }
-
