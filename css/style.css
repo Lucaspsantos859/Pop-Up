@@ -1,0 +1,92 @@
+body.locked {
+  overflow: hidden;
+}
+
+/* FUNDO COM IMAGEM DESFOCADA */
+#mandatory-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  overflow: hidden;
+}
+
+#mandatory-popup::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../images/fundo.png") center center / cover no-repeat;
+  filter: blur(8px);
+  transform: scale(1.1);
+  z-index: -2;
+}
+
+#mandatory-popup::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* CAIXA */
+.mandatory-box {
+  position: relative;
+  background: #ffffff;
+  width: 90%;
+  max-width: 450px;
+  padding: 35px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+/* X */
+.close-x {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 22px;
+  text-decoration: none;
+  color: #888;
+  font-weight: bold;
+}
+
+.close-x:hover {
+  color: #000;
+}
+
+/* BOTÕES */
+.popup-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-accept,
+.btn-decline {
+  flex: 1;
+  padding: 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-accept {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.btn-decline {
+  background: #ddd;
+  color: #333;
+}
